@@ -6,7 +6,7 @@ loop = asyncio.get_event_loop()
 
 api_id = 15338487
 api_hash = '018ea2f67c3a446cfe44ca5cfd5f49bb'
-client = TelegramClient('vissual', api_id, api_hash).start()
+client = TelegramClient('aegonvps', api_id, api_hash).start()
 
 total = 0
 # tmp = 0
