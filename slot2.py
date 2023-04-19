@@ -4,7 +4,7 @@ from telethon import TelegramClient, events, utils, Button
 
 api_id = 19426024 
 api_hash = '93e64ab1fca196717682f11b879b9214'
-sesi_file = 'dexter'
+sesi_file = 'arlenvps'
 
 cmd = '/th_SlotMachine_SevenFish'
 cmd1 = '/th_SlotMachine_add'
@@ -15,7 +15,7 @@ with TelegramClient(sesi_file, api_id, api_hash) as client:
         @client.on(events.NewMessage(from_users=bot))
         async def handler(event):
             
-            if '1000000Qn' in event.raw_text:
+            if '100000Qn' in event.raw_text:
                 time.sleep(2)
                 await event.respond('/tamanHiburan_TembakTopeng')
                 print('Mulai Dart')
