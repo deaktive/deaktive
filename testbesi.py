@@ -9,7 +9,7 @@ from telethon.tl.functions.messages import GetBotCallbackAnswerRequest
 
 api_id = 19426024
 api_hash = '93e64ab1fca196717682f11b879b9214'
-sesi_fil = 'dexter'
+sesi_fil = 'dextervps'
 
 besiList = [
 '/makan_rotibelanda',
