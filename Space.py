@@ -5,9 +5,9 @@ import random
 
 from telethon import TelegramClient, events, utils, Button
 
-api_id = 2578350
-api_hash = '4ba467bcddfae36a61a4ed78b653372f'
-sesi_file = 'dexter'
+api_id = 19426024
+api_hash = '93e64ab1fca196717682f11b879b9214'
+sesi_file = 'dextervps'
 
 bot_id = 'KampungMaifamxBot'
 Mine = '⛏'
@@ -21,7 +21,7 @@ with TelegramClient(sesi_file, api_id, api_hash) as client:
 
 
             if "Proses tambang "  in pesan:
-                time.sleep(117)
+                time.sleep(270)
                 await event.click(text=Mine)                
                 print(time.asctime(), 'Tambang')
                 return
