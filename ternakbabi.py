@@ -6,7 +6,7 @@ from telethon import TelegramClient, events, utils, Button
 
 api_id = 19088515 
 api_hash = 'a414cdd5cacd7f93ec0b992b57802458'
-sesi_file = 'celipso'
+sesi_file = 'daeronvps'
 
 Casino = '/beriMakan'
 Masak = '/masak_minibacon_220'
