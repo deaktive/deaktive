@@ -1,12 +1,14 @@
 from telethon import TelegramClient, events, sync, utils
 from time import sleep
+from random import randint
 import asyncio
+import random
 
 loop = asyncio.get_event_loop()
 
 api_id = 15338487
 api_hash = '018ea2f67c3a446cfe44ca5cfd5f49bb'
-client = TelegramClient('aegonvps', api_id, api_hash).start()
+client = TelegramClient('vissual', api_id, api_hash).start()
 
 total = 0
 # tmp = 0
@@ -169,14 +171,38 @@ async def handler(event):
         await event.respond(Masak)
         return
     
+#    if 'Kamu tidak bisa memasak' in event.text:
+#        curibarang = False
+#        curiduit = True
+#        # tmp = 0
+#        sleep(2)
+#        await event.respond('/curiuang_940776279704')
+#        sleep(4)
+#        await event.respond('/rumah_curiBarang')
+#        return
     if 'Kamu tidak bisa memasak' in event.text:
-        curibarang = False
-        curiduit = True
-        # tmp = 0
         sleep(2)
-        await event.respond('/curiuang_940776279704')
-        sleep(4)
+        await event.respond("/casino_UltraLuck_"+str(random.randint(1,50))+"_5e9")
+        return
+    
+    if 'Kamu bertaruh' in event.text:
+        sleep(2)
+        await event.respond("/casino_UltraLuck_"+str(random.randint(1,50))+"_5e9")
+        return
+    
+    if 'Berhasil bertaruh' in event.text:
+        sleep(2)
         await event.respond('/rumah_curiBarang')
+        return
+    
+    if 'Hasil akan keluar' in event.text:
+        sleep(2)
+        await event.respond('/rumah_curiBarang')
+        return
+    
+    if 'Selesaikan permainan' in event.text:
+        sleep(2)
+        await event.respond('/casino_result')
         return
         
     if 'Tidak cukup bahan' in event.text:
