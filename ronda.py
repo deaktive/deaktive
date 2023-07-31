@@ -13,7 +13,7 @@ sesi_fil = 'rektvps'
 
 alamat = [
 '/curiuang_940776279704',
-'/curiuang_330041286550',
+'/curiuang_571820288844',
 '/curiuang_331251158135',
 '/curiuang_670639242838',
 '/curiuang_421325453322',
