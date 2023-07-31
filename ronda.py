@@ -26,6 +26,8 @@ alamat = [
 '/curiuang_421325453322',
 '/curiuang_880988278939',
 '/curiuang_111965147433',
+'/curiuang_360996181946',
+'/curiuang_640653083028',
 '/makan_kudapansuci',
 '/levelupguild',
 ]
