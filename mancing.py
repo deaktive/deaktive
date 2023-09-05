@@ -1,4 +1,4 @@
-#by Aditz
+# -*- coding: utf8 -*-
 #!/usr/bin/env python3
 import time
 import asyncio
