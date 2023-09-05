@@ -6,7 +6,7 @@ from telethon import TelegramClient, events, utils, Button
 
 api_id = 19691895 
 api_hash = 'c58b4f1b0b521f77b9378838ce3e6712'
-sesi_file = 'dextervps'
+sesi_file = 'arlen'
 
 bot_id = 'KampungMaifamxBot'
 Area = 'Hutan Sakral'
