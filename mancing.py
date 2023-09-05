@@ -9,7 +9,7 @@ from telethon.tl.functions.messages import GetBotCallbackAnswerRequest
 
 api_id = 19426024 
 api_hash = '93e64ab1fca196717682f11b879b9214'
-sesi_file = 'arlenvps'
+sesi_file = 'dexter'
 loop = asyncio.new_event_loop()
 
 #bot
