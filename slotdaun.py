@@ -4,7 +4,7 @@ from telethon import TelegramClient, events, utils, Button
 
 api_id = 19426024
 api_hash = '93e64ab1fca196717682f11b879b9214'
-sesi_file = 'dexter'
+sesi_file = 'arlen'
 
 cmd = '/th_SlotMachine_SixLeaves'
 cmd1 = '/th_SlotMachine_add'
