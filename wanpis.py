@@ -77,7 +77,27 @@ with TelegramClient(sesi_file, api_id, api_hash) as client:
             
             elif "Energi krumu telah habis" in pesan:
                 time.sleep(2)
-                await event.respond('/restore')  
+                await event.respond('/levelupKapal')  
+                return
+            
+            elif "Silakan pilih" in pesan:
+                time.sleep(2)
+                await event.respond('/levelupKapal_ATK')  
+                return
+            
+            elif "Apa kamu yakin" in pesan:
+                time.sleep(2)
+                await event.click(0,0)  
+                return
+            
+            elif "Berhasil meningkatkan" in pesan:
+                time.sleep(2)
+                await event.respond('/adventure')  
+                return
+            
+            elif "Kapalmu masih" in pesan:
+                time.sleep(2)
+                await event.respond('/adventure')  
                 return
                 
             elif "anggota kelompokmu" in pesan or "musuh kabur" in pesan:
