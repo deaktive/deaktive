@@ -5,7 +5,7 @@ from telethon import TelegramClient, events, utils
 
 api_id = 19426024 
 api_hash = '93e64ab1fca196717682f11b879b9214'
-sesi_file = 'dexter'
+sesi_file = 'dexterop'
 
 #Slot apa
 print("\nPilih mau slot apa?")
