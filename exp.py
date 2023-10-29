@@ -4,7 +4,7 @@ from telethon import TelegramClient, events, utils, Button
 
 api_id = 19426024 
 api_hash = '93e64ab1fca196717682f11b879b9214'
-sesi_file = "dexterop"
+sesi_file = "dexter"
 
 bot_id = 'GrandPiratesBot'
 adv = '/adventure'
@@ -12,6 +12,7 @@ pil = '/use_EXPPill_10'
 upkapal = '/levelupKapal_ATK'
 kapal = '/levelupKapal'
 buah = '/makanbuahiblis_SukeSukeNoMi'
+exp_pil = 0
 
 
 logging.basicConfig(level=logging.ERROR)
@@ -34,75 +35,85 @@ with TelegramClient(sesi_file, api_id, api_hash) as client:
         @client.on(events.NewMessage(from_users=bot_id))
         async def handler(event):
             pesan = event.raw_text
+            global exp_pil
             
             if "sudah mencapai batas maksimal" in pesan:
                 tunggu_hingga_menit_detik_00()
                 await event.respond('/adventure')
                 return
             
-            elif "Gurun pasir" in pesan:
+            if "Sebuah kota" in pesan:
                 time.sleep(2)
                 await event.click(0,0)
                 return
             
-            elif "menelusuri SandoraDesert" in pesan:
+            if "menelusuri Erumalu" in pesan:
                 time.sleep(2)
                 await event.click(0,0)
                 return
             
-            elif "Kamu memutuskan" in pesan:
-                time.sleep(2)
-                await event.click(0,0)
+            if "Kamu memutuskan" in pesan:
+                exp_pil += 1
+                if exp_pil > 10:
+                   time.sleep(2)
+                   await event.respond("/use_EXPPill_10")
+                   return
+                else:
+                   print(time.asctime())
+                   time.sleep(1)
+                   await event.click(0,0)
+                   return
                 return
             
-            elif "Energi krumu telah habis" in pesan:
+            if "Berhasil menggunakan" in pesan:
+                exp_pil = 0 
+                time.sleep(2)
+                await event.respond(buah)
+                return
+            
+            if "Energi krumu telah habis" in pesan:
                 time.sleep(2)
                 await event.respond(pil)
                 #await event.respond('/levelupKapal')  
                 return
             
-            elif "Berhasil menggunakan" in pesan:
-                time.sleep(2)
-                await event.respond(buah)
-                #await event.respond('/levelupKapal')  
-                return
-            
-            elif "Berhasil memakan" in pesan:
+            if "Berhasil memakan" in pesan:
                 time.sleep(2)
                 await event.respond('/levelupKapal')  
                 return
             
-            elif "Kamu masih" in pesan:
+            if "Kamu masih" in pesan:
                 time.sleep(2)
                 await event.respond('/levelupKapal')  
                 return
             
-            elif "Kamu hanya" in pesan:
+            if "Kamu hanya" in pesan:
                 time.sleep(2)
                 await event.respond('/levelupKapal')  
                 return
             
-            elif "Silakan pilih" in pesan:
+            if "Silakan pilih" in pesan:
                 time.sleep(2)
                 await event.respond('/levelupKapal_ATK')  
                 return
             
-            elif "saat naik" in pesan:
+            if "saat naik" in pesan:
                 time.sleep(2)
                 await event.click(0,0)  
                 return
             
-            elif "Berhasil meningkatkan" in pesan:
+            if "Berhasil meningkatkan" in pesan:
                 time.sleep(2)
                 await event.respond('/adventure')  
                 return
             
-            elif "Kapalmu masih" in pesan:
+            if "Kapalmu masih" in pesan:
                 time.sleep(2)
-                await event.respond('/restore_x')  
+                await event.respond('/adventure')  
+                #await event.respond('/restore_x')  
                 return
                 
-            elif "Berhasil memulihkan" in pesan:
+            if "Berhasil memulihkan" in pesan:
                 time.sleep(2)
                 await event.respond('/adventure')
                 return
