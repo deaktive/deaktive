@@ -21,116 +21,20 @@ with TelegramClient(sesi_file, api_id, api_hash) as client:
                 await event.click(0,0)
                 return
             
-            if "charle" in pesan:
+            if "(+100 Poin)" in pesan:
                 time.sleep(20)
-                await event.respond('Bunuh charle')
+                await event.click(0,0)
                 return
             
-            if "lastar" in pesan:
+            if "(+400 Poin)" in pesan:
                 time.sleep(20)
-                await event.respond('Bunuh lastar')
+                
                 return
             
-            if "shawny" in pesan:
+            if "(+1000 Poin)" in pesan:
                 time.sleep(20)
-                await event.respond('Bunuh shawny')
+    
                 return
-            
-            if "edward" in pesan:
-                time.sleep(20)
-                await event.respond('Bunuh edward')
-                return
-            
-            if "hendery" in pesan:
-                time.sleep(20)
-                await event.respond('Bunuh hendery')
-                return
-            
-            if "gukguk" in pesan:
-                time.sleep(20)
-                await event.respond('Bunuh gukguk')
-                return
-            
-            if "ganari" in pesan:
-                time.sleep(20)
-                await event.respond('Bunuh ganari')
-                return
-            
-            if "brondo" in pesan:
-                time.sleep(20)
-                await event.respond('Bunuh brondo')
-                return
-            
-            if "denver" in pesan:
-                time.sleep(20)
-                await event.respond('Bunuh denver')
-                return
-            
-            if "prondous" in pesan:
-                time.sleep(20)
-                await event.respond('Bunuh prondous')
-                return
-            
-            if "saori" in pesan:
-                time.sleep(20)
-                await event.respond('Bunuh saori')
-                return
-            
-            if "rawon" in pesan:
-                time.sleep(20)
-                await event.respond('Bunuh rawon')
-                return
-            
-            if "Ghobi" in pesan:
-                time.sleep(20)
-                await event.respond('Bunuh Ghobi')
-                return
-            
-            if "arissa" in pesan:
-                time.sleep(20)
-                await event.respond('Bunuh arissa')
-                return
-            
-            if "evelline" in pesan:
-                time.sleep(20)
-                await event.respond('Bunuh evelline')
-                return
-            
-            if "Chroro" in pesan:
-                time.sleep(20)
-                await event.respond('Bunuh Chroro')
-                return
-            
-            if "sebastian" in pesan:
-                time.sleep(20)
-                await event.respond('Bunuh sebastian')
-                return
-            
-            if "geldo" in pesan:
-                time.sleep(20)
-                await event.respond('Bunuh geldo')
-                return
-            
-            if "sopie" in pesan:
-                time.sleep(20)
-                await event.respond('Bunuh sopie')
-                return
-            
-            if "alrena" in pesan:
-                time.sleep(20)
-                await event.respond('Bunuh alrena')
-                return
-            
-            if "gilbert." in pesan:
-                time.sleep(20)
-                await event.respond('Bunuh gilbert')
-                return
-            
-            if "sergio" in pesan:
-                time.sleep(20)
-                await event.respond('Bunuh sergio')
-                return
-            
             else:
                 time.sleep(20)
                 await event.click(0,0)
