@@ -5,19 +5,22 @@ from telethon import TelegramClient, events, utils
 
 api_id = 19426024 
 api_hash = '93e64ab1fca196717682f11b879b9214'
-sesi_file = 'dexterop'
+sesi_file = 'dexter'
 
 #Slot apa
 print("\nPilih mau slot apa?")
-pilih = input('\tKetik 1 untuk 💰 BigChance\n\tKetik 2 untuk 💎 RainDinner\n   Angka =  ')
+pilih = input('\tKetik 1 untuk 💰 BigChance\n\tKetik 2 untuk 💎 RainDinner\n\tKetik 3 untuk 🎫 GoldenCoupons\n  Angka =  ')
 if pilih == '1': 
     Slot = '/visit_BigChance' 
 elif pilih == '2': 
     Slot = '/visit_Raindinners'
+elif pilih == '3':
+    Slot = '/visit_GoldenCoupons'
+ampas = 0
 
 #CoinBerapa
 print("\nPilih mau coin berapa")
-pilih = input('\tKetik 1 untuk 🪙\n\tKetik 2 untuk 🪙🪙\n\tKetik 3 untuk 🪙🪙🪙\n\tKetik 4 untuk 💎\n    Angka =  ')
+pilih = input('\tKetik 1 untuk 🪙\n\tKetik 2 untuk 🪙🪙\n\tKetik 3 untuk 🪙🪙🪙\n\tKetik 4 untuk -1💎\n\tKetik 5 untuk -10💎\n\tKetik 6 untuk 🎫 BeliKupon\n\tKetik 7 untuk 🎟\n    Angka =  ')
 if pilih == '1': 
     Coin = '🪙'
 elif pilih == '2': 
@@ -26,12 +29,12 @@ elif pilih == '3':
     Coin = '🪙🪙🪙'
 elif pilih == '4': 
     Coin = 'Play (-1💎)'
-    
-#hadiah
-
-SmallBeers = 0
-GiantBeer = 0 
-DeluxeWine = 0 
+elif pilih == '5': 
+    Coin = 'Play (-10💎)'
+elif pilih == '6':
+    Coin = '/shop_GoldenCoupons_beli_20'
+elif pilih == '7':
+    Coin = 'Play (-1🎟)'
 
     
 with TelegramClient(sesi_file, api_id, api_hash) as client:
@@ -39,11 +42,10 @@ with TelegramClient(sesi_file, api_id, api_hash) as client:
 
     @client.on(events.NewMessage(from_users='GrandPiratesBot'))
     async def handler(event):
-        global SmallBeers
-        global GiantBeer
-        global DeluxeWine
+        global ampas
         
         if 'Tempat judi terbesar' in event.raw_text:
+            ampas = 0
             time.sleep(2)
             await event.click(text=Coin)
             return
@@ -58,27 +60,32 @@ with TelegramClient(sesi_file, api_id, api_hash) as client:
             await event.click(text=Coin)
             return
         
-        if 'Kamu memutar slot' in event.raw_text:
+        if 'memenangkan Hadiah' in event.raw_text:
             time.sleep(2)
-            await event.click(0,0) 
+            await event.click(text=Coin) 
             return
         
-        if '🍻 SmallBeers' in event.raw_text:
-            time.sleep(2)
-            SmallBeers+=1
-            print(SmallBeers)
+        if "lain kali" in event.raw_text:
+            ampas += 1
+            if ampas > 3:
+                time.sleep(2)
+                await event.respond(Slot)
+                return
+            else:
+                print(time.asctime())
+                time.sleep(1)
+                await event.click(text=Coin)
+                return
             return
         
-        if '🍺 GiantBeer' in event.raw_text:
+        if 'Gedung judi' in event.raw_text:
             time.sleep(2)
-            GiantBeer+=1
-            print(GiantBeer)
+            await event.respond(Coin) 
             return
         
-        if '🍷 DeluxeWine' in event.raw_text:
+        if 'Berhasil membeli' in event.raw_text:
             time.sleep(2)
-            DeluxeWine+=1
-            print(DeluxeWine)
+            await event.respond(Coin) 
             return
         
         
