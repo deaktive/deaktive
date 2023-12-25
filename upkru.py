@@ -6,7 +6,7 @@ from telethon import TelegramClient, events, utils
 
 api_id = 2394927 
 api_hash = '4ab4c48f456d11a2aef03310c88c0b81'
-sesi_file = 'arlen'
+sesi_file = 'puputfairy'
 
 Adv = 'DaftarKru'
 
