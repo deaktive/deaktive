@@ -5,7 +5,7 @@ from datetime import datetime
 api_id = 1998603
 api_hash = '341eb9d72c2de53ef2e70269728d5fca'
 
-sesi_file = 'ipen'
+sesi_file = 'dexter'
 bot_id = 'KampungMaifamXBot'
 cek = "/xm2023_barang"
 ngumpul = 'KumpulkanHadiah'
