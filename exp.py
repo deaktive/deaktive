@@ -4,7 +4,7 @@ from telethon import TelegramClient, events, utils, Button
 
 api_id = 19426024 
 api_hash = '93e64ab1fca196717682f11b879b9214'
-sesi_file = "dexter"
+sesi_file = "dexterop"
 
 bot_id = 'GrandPiratesBot'
 adv = '/adventure'
@@ -42,14 +42,19 @@ with TelegramClient(sesi_file, api_id, api_hash) as client:
                 await event.respond('/adventure')
                 return
             
-            if "Sebuah kota" in pesan:
-                time.sleep(2)
+            if "Dianggap sebagai" in pesan:
+                time.sleep(1.5)
                 await event.click(0,0)
                 return
             
-            if "menelusuri Erumalu" in pesan:
-                time.sleep(2)
-                await event.click(0,0)
+            if "oleh 1 musuh:" in pesan or "oleh 2 musuh:" in pesan:
+                time.sleep(1.5)
+                await event.click(1,0)
+                return
+            
+            if "oleh 3 musuh:" in pesan or "oleh 4 musuh:" in pesan:
+                time.sleep(1.5)
+                await event.click(1,0)
                 return
             
             if "Kamu memutuskan" in pesan:
@@ -68,7 +73,7 @@ with TelegramClient(sesi_file, api_id, api_hash) as client:
             if "Berhasil menggunakan" in pesan:
                 exp_pil = 0 
                 time.sleep(2)
-                await event.respond(buah)
+                await event.respond('/levelupKapal')
                 return
             
             if "Energi krumu telah habis" in pesan:
